@@ -4,6 +4,20 @@ class Program
 {
     static void Main(string[] args)
     {
+        // Name and square favorite number function
+        void NameAndSquareNum(string param1, int param2)
+        {
+            int squareNum = param2 * param2;
+            Console.WriteLine($"{param1}, the square of your number is: {squareNum}");
+        }
+
+        // Age function
+        void AgeCalculator(string name, int param3)
+        {
+            int age = 2025 - param3;
+            Console.WriteLine($"{name}, you turn {age} this year.");
+        }
+
         // Program welcome
         Console.WriteLine("Welcome to the program! ");
 
@@ -20,5 +34,8 @@ class Program
         Console.Write("Please enter the year you were born: ");
         string year = Console.ReadLine();
         int userYear = int.Parse(year);
+
+        NameAndSquareNum(userName, userNum);
+        AgeCalculator(userName, userYear);
     }
 }
