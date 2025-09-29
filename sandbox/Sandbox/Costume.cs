@@ -1,7 +1,7 @@
 class Costume
 {
     // attributes
-    string body = ""; // Empty string
+    public string body = ""; // Empty string
     string size = "";
     string footwear = "";
     string tools = "";
