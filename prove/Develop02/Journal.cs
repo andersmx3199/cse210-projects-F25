@@ -72,7 +72,7 @@ using System.IO;
 
             foreach (string line in File.ReadAllLines(path))
             {
-                string[] parts = line.Split(' ');
+                string[] parts = line.Split('|');
                 if (parts.Length == 3)
                 {
                     _entries.Add(new Entry(parts[0], parts[1], parts[2]));
