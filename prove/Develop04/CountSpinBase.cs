@@ -1,14 +1,14 @@
-abstract class CountAndSpin
+abstract class CountSpinBase
 {
-    protected string _name;
-    protected string _description;
+    protected string _activityName;
+    protected string _descriptionOfActivity;
     protected int _duration;
 
     public void StartActivity()
     {
         Console.Clear();
-        Console.WriteLine($"Starting {_name}");
-        Console.WriteLine($"\n{_description}");
+        Console.WriteLine($"Starting {_activityName}");
+        Console.WriteLine($"\n{_descriptionOfActivity}");
         Console.Write("\nSet duration (seconds): ");
         _duration = int.Parse(Console.ReadLine());
 
@@ -20,7 +20,7 @@ abstract class CountAndSpin
     {
         Console.WriteLine("\nNice job.");
         ShowSpinner(2);
-        Console.WriteLine($"\nYou spent {_duration} seconds doing {_name}.");
+        Console.WriteLine($"\nYou spent {_duration} seconds doing {_activityName}.");
         ShowSpinner(3);
     }
 

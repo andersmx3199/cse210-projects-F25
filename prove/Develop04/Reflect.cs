@@ -1,30 +1,30 @@
-class Reflect : CountAndSpin
+class Reflect : CountSpinBase
 {
     private List<string> _prompts = new List<string>
     {
-        "Think of a moment when you helped someone.",
-        "Recall a time you overcame something hard.",
-        "Remember a time you supported a friend.",
-        "Think of a moment you acted with kindness."
+        "Think of a time when you stood up for someone else.",
+        "Think of a time when you did something really difficult",
+        "Think of a time when you helped someone in need",
+        "Think of a time when you did something truly selfless"
     };
 
     private List<string> _questions = new List<string>
     {
-        "Why did this matter to you?",
-        "What did you learn from it?",
-        "How did it begin?",
-        "How did you feel after?",
-        "What made it meaningful?",
-        "What stands out the most?",
-        "How can this help you later?",
-        "What does this say about you?",
-        "How could you use this strength again?"
+        "Why was this experience meaning to you?",
+        "Have you ever done anything like this before?",
+        "How did you get started?",
+        "How did you feel when it was complete?",
+        "What made this time different than other times when you were not as successful?",
+        "What is yout favorite thing about this experience?",
+        "What could you learn from this experience that applies to other situations?",
+        "What did you learn about yourself through this experience?",
+        "How can you keep this experience in mind in the future?"
     };
 
     public Reflect()
     {
-        _name = "Reflect";
-        _description = "Look back on a moment of strength to better understand yourself.";
+        _activityName = "Reflect";
+        _descriptionOfActivity = "Look back on a moment of strength to better understand yourself.";
     }
 
     public override void Run()

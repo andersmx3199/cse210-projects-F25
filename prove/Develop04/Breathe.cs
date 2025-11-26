@@ -1,9 +1,9 @@
-class Breathe : CountAndSpin
+class Breathe : CountSpinBase
 {
     public Breathe()
     {
-        _name = "Breathe";
-        _description = "Follow a slow inhale and exhale pattern to calm your body and mind.";
+        _activityName = "Breathe";
+        _descriptionOfActivity = "Follow a slow inhale and exhale pattern to calm your body and mind.";
     }
 
     public override void Run()

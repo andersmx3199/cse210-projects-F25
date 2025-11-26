@@ -1,4 +1,4 @@
-class Listing : CountAndSpin
+class Listing : CountSpinBase
 {
     private List<string> _prompts = new List<string>
     {
@@ -11,8 +11,8 @@ class Listing : CountAndSpin
 
     public Listing()
     {
-        _name = "Listing";
-        _description = "Write down as many thoughts as you can related to a given topic.";
+        _activityName = "Listing";
+        _descriptionOfActivity = "Write down as many thoughts as you can related to a given topic.";
     }
 
     public override void Run()
