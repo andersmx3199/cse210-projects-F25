@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        List<CountAndSpin> activities = new List<CountAndSpin>
+        List<CountSpinBase> activities = new List<CountSpinBase>
         {
             new Breathe(),
             new Reflect(),
