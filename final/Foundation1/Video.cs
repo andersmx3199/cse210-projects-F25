@@ -1,4 +1,5 @@
 using System.Reflection;
+using System.Security.Cryptography.X509Certificates;
 
 class Video 
 {
@@ -12,9 +13,16 @@ class Video
     // Length in seconds of the video
     public int _length = 0;
 
+    public List<Comment> comments;
+
 
     // Behaviors of the Video Class
     
+    public Video()
+    {
+        comments = new List<Comment>();
+    }
+
     // Get and Set YouTube Video Title
     public string GetTitle()
     {
@@ -45,12 +53,28 @@ class Video
         _length = length;
     }
 
-    Comment comment1 = new Comment();
+
+    public void AddComment(Comment comment)
+    {
+        comments.Add(comment);
+    }
+
+    public List<Comment> GetComments()
+    {
+        return comments;
+    }
 
     // Display Video Details
     public void DisplayVideo()
     {
-        Console.WriteLine($"{_title} by {_author} is {_length}s long.");
+        Console.WriteLine($"YouTube Video: {_title}");
+        Console.WriteLine($"YouTube Author: {_author}");
+        Console.WriteLine($"Duration: {_length}s");
+        Console.WriteLine("Comments:");
+        foreach (Comment comment in comments){
+            Console.WriteLine($"{comment._username} says {comment._comment}");
+        }
+        Console.WriteLine("");
     }
 
 }
