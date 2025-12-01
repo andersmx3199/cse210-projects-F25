@@ -1,3 +1,5 @@
+using System.Reflection;
+
 class Video 
 {
 
@@ -43,5 +45,12 @@ class Video
         _length = length;
     }
 
+    Comment comment1 = new Comment();
+
+    // Display Video Details
+    public void DisplayVideo()
+    {
+        Console.WriteLine($"{_title} by {_author} is {_length}s long.");
+    }
 
 }
