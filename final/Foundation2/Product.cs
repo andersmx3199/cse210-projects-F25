@@ -27,6 +27,6 @@ class Product
     }
     public string GetProductID()
     {
-        return _productID;
+        return _productID
     }
 }

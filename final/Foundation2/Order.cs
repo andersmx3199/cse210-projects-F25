@@ -1,12 +1,13 @@
 class Order
 {
     private List<Product> _products;
-    private Customer customer;
+    private Customer _customer;
     private Address address;
 
-    public Order()
+    public Order(Customer customer)
     {
-        
+        _customer = customer;
+        _products = new List<Product>();
     }
 
     public void AddProduct(Product product)
@@ -25,7 +26,7 @@ class Order
         // to my knowledge, the ? 5 : 35 is the bool function.
         // if USA is true then the cost is 5, if not it is 35. 
         // Had to use AI to help with this section.
-        return total + (customer.GetUSA() ? 5 : 35);
+        return total + (_customer.GetUSA() ? 5 : 35);
     }
 
     public string GetOrderLabel()
@@ -41,6 +42,6 @@ class Order
 
     public string GetShippingLabel()
     {
-        return ($"Shipping Label:\n{customer.GetName()}\n{address.GetAddress()}");
+        return ($"Shipping Label:\n{_customer.GetName()}\n{address.GetAddress()}");
     }
 }
