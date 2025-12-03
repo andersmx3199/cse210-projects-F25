@@ -6,7 +6,7 @@ class LectureEvent : Event
     private string _speaker = "";
 
     // Lecture event is using inheritance from the event class.
-    public LectureEvent(string title, string description, DateTime date, string time, Address address, string speaker, int capacity, string eventType) : base(title, description, date, time, address, eventType)
+    public LectureEvent(string title, string description, string date, string time, Address address, string speaker, int capacity, string eventType) : base(title, description, date, time, address, eventType)
     {
         _speaker = speaker;
         _capacity = capacity;
@@ -14,6 +14,6 @@ class LectureEvent : Event
 
     public override string GetFull()
     {
-        return ($"{GetStandard}\nType: Lecture\nSpeaker: {_speaker}\nCapacity: {_capacity}");
+        return ($"{GetStandard()}\nType: Lecture\nSpeaker: {_speaker}\nCapacity: {_capacity}");
     }
 }
