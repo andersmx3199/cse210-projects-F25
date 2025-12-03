@@ -1,6 +1,6 @@
 using System.ComponentModel;
 
-class Event
+abstract class Event
 {
     // Attributes for the Base Event Class
     private string _title = "";
@@ -29,10 +29,7 @@ class Event
     }
 
     // Get the full description. NEED TO ADD THE TYPE OF EVENT!
-    public string GetFull()
-    {
-        return ($"Title: {_title}\nDescription: {_description}\nDate: {_date}\nTime: {_time}\nLocation: {_address}");
-    }
+    public abstract string GetFull();
 
     // Get the short description.
     public string GetShort()
