@@ -2,7 +2,7 @@ class RunningActivity : Activity
 {
     private double _distance = 0;
 
-    public RunningActivity(DateTime date, int duration, string activity, double distance) : base (date, duration, activity)
+    public RunningActivity(string date, int duration, string activity, double distance) : base (date, duration, activity)
     {
         _distance = distance;
     }
@@ -19,6 +19,6 @@ class RunningActivity : Activity
 
     public override double GetPace()
     {
-        return (_duration / _distance);
+        return Math.Round((_duration / _distance), 2);
     }
 }
