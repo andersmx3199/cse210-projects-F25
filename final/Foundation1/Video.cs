@@ -5,14 +5,9 @@ class Video
 {
 
     // Attributes for the Video Class
-
-    // Title containing the title of the video
     public string _title = "";
-    // Author containing the author of the video
     public string _author = "";
-    // Length in seconds of the video
     public int _length = 0;
-
     public List<Comment> comments;
 
 
