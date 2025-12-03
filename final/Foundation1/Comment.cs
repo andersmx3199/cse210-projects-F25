@@ -6,6 +6,8 @@ class Comment
     public string _username = "";
     public string _comment = "";
 
+    // Behaviors for the Comment Class
+    // Set and Get Username
     public string GetUsername()
     {
         return _username;
@@ -15,6 +17,7 @@ class Comment
         _username = username;
     }
 
+    // Set and Get Comment
     public string GetComment()
     {
         return _comment;
@@ -24,6 +27,7 @@ class Comment
         _comment = comment;
     }
 
+    // Comment Constructor
     public Comment(string username, string comment) 
     {
         _username = username;

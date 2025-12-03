@@ -12,7 +12,6 @@ class Video
 
 
     // Behaviors of the Video Class
-    
     public Video()
     {
         comments = new List<Comment>();
