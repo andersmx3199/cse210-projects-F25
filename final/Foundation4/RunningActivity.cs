@@ -9,12 +9,12 @@ class RunningActivity : Activity
 
     public override double GetDistance()
     {
-        return _distance;
+        return Math.Round((_distance),2);
     }
 
     public override double GetSpeed()
     {
-        return (_distance / _duration) * 60;
+        return Math.Round(((_distance / _duration) * 60),2);
     }
 
     public override double GetPace()

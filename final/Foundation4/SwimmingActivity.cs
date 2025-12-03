@@ -9,12 +9,12 @@ class SwimmingActivity : Activity
 
     public override double GetDistance()
     {
-        return (((_lapNums * 50) / 1000) * 0.62);
+        return Math.Round((((_lapNums * 50) / 1000) * 0.62),2);
     }
 
     public override double GetSpeed()
     {
-        return (GetDistance() / _duration) * 60;
+        return Math.Round(((GetDistance() / _duration) * 60),2);
     }
 
     public override double GetPace()

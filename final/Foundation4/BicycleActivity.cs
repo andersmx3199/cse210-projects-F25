@@ -9,12 +9,12 @@ class BicycleActivity : Activity
 
     public override double GetDistance()
     {
-        return ((_speed * _duration) / 60);
+        return Math.Round(((_speed * _duration) / 60),2);
     }
 
     public override double GetSpeed()
     {
-        return _speed;
+        return Math.Round((_speed),2);
     }
 
     public override double GetPace()
