@@ -73,26 +73,26 @@ class Program
         Console.Write("Select type: ");
         string goalchoice = Console.ReadLine();
 
-        Console.Write("Goal title: ");
-        string name = Console.ReadLine();
+        Console.Write("Name of your goal? ");
+        string goalName = Console.ReadLine();
 
-        Console.Write("Points for each record: ");
+        Console.Write("Number of points associated with the goal: ");
         int pts = int.Parse(Console.ReadLine());
 
         switch (goalchoice)
         {
             case "1":
-                goals.Add(new SimpleGoal(name, pts));
+                goals.Add(new SimpleGoal(goalName, pts));
                 break;
             case "2":
-                goals.Add(new EternalGoal(name, pts));
+                goals.Add(new EternalGoal(goalName, pts));
                 break;
             case "3":
-                Console.Write("Target count: ");
-                int target = int.Parse(Console.ReadLine());
-                Console.Write("Bonus points (when target reached): ");
+                Console.Write("Number of times required to accomplish this goal: ");
+                int accomplish = int.Parse(Console.ReadLine());
+                Console.Write("Bonus for accomplishing the goal: ");
                 int bonus = int.Parse(Console.ReadLine());
-                goals.Add(new CheckGoal(name, pts, target, bonus));
+                goals.Add(new CheckGoal(goalName, pts, accomplish, bonus));
                 break;
             default:
                 Console.WriteLine("Invalid goal type chosen.");

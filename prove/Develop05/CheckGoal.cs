@@ -1,12 +1,12 @@
 class CheckGoal : Goals
 {
-    private int _target;
+    private int _accomplished;
     private int _current;
     private int _bonus;
 
-    public CheckGoal(string title, int points, int target, int bonus) : base(title, points)
+    public CheckGoal(string title, int points, int accomplished, int bonus) : base(title, points)
     {
-        _target = target;
+        _accomplished = accomplished;
         _current = 0;
         _bonus = bonus;
     }
@@ -21,7 +21,7 @@ class CheckGoal : Goals
         if (_completed) return 0;
 
         _current++;
-        if (_current >= _target)
+        if (_current >= _accomplished)
         {
             _completed = true;
             return _points + _bonus;
@@ -32,7 +32,14 @@ class CheckGoal : Goals
 
     public override string GetStatus()
     {
-        return $"{GetStatus()} (Completed {_current}/{_target})";
-    }
+        string checkbox;
 
+        if (_completed)
+            checkbox = "[X]";
+        else
+            checkbox = "[ ]";
+
+        string baseStatus = $"{checkbox} {_title}";
+        return $"{baseStatus} (Completed {_current}/{_accomplished})";
+    }
 }

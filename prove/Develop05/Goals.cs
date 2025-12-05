@@ -24,6 +24,13 @@ abstract class Goals
 
     public virtual string GetStatus()
     {
-        return $"{(_completed ? "[X]" : "[ ]")} {_title}";
+        string checkbox;
+
+        if (_completed)
+            checkbox = "[X]";
+        else
+            checkbox = "[ ]";
+
+        return $"{checkbox} {_title}";
     }
 }
