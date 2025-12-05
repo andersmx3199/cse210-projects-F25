@@ -8,19 +8,14 @@ abstract class Goals
 
     protected Goals(string title, int points)
     {
-        _title = title ?? "";
+        _title = title;
         _points = points;
         _completed = false;
     }
 
     public void SetComplete(bool complete) => _completed = complete;
 
-    public virtual int RecordEvent()
-    {
-        if (_completed) return 0;
-        _completed = true;
-        return _points;
-    }
+    public abstract int RecordEvent();
 
     public virtual string GetStatus()
     {
