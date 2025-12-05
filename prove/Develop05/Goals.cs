@@ -4,21 +4,24 @@ abstract class Goals
 {
     protected string _title;
     protected int _points;
-    protected bool _completed;
+    protected bool _isComplete;
 
     protected Goals(string title, int points)
     {
         _title = title;
         _points = points;
-        _completed = false;
+        _isComplete = false;
     }
 
-    public void SetComplete(bool complete) => _completed = complete;
+    public void SetComplete(bool isComplete)
+    {
+        _isComplete = isComplete;
+    }
 
     public virtual int RecordEvent()
     {
-        if (_completed) return 0;
-        _completed = true;
+        if (_isComplete) return 0;
+        _isComplete = true;
         return _points;
     }
 
@@ -26,7 +29,7 @@ abstract class Goals
     {
         string checkbox;
 
-        if (_completed)
+        if (_isComplete)
             checkbox = "[X]";
         else
             checkbox = "[ ]";
