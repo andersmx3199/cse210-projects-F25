@@ -1,4 +1,4 @@
-class SimpleGoal : Goal
+class SimpleGoal : Goals
 {
     public SimpleGoal(string title, int points) : base(title, points) { }
 

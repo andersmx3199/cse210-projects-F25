@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 class Program
 {
-    static List<Goal> goals = new List<Goal>();
+    static List<Goals> goals = new List<Goals>();
     static void Main(string[] args)
     {
         // Main Menu
@@ -90,7 +90,7 @@ class Program
                 int target = int.Parse(Console.ReadLine());
                 Console.Write("Bonus points (when target reached): ");
                 int bonus = int.Parse(Console.ReadLine());
-                goals.Add(new ChecklistGoal(name, pts, target, bonus));
+                goals.Add(new CheckGoal(name, pts, target, bonus));
                 break;
             default:
                 Console.WriteLine("Invalid goal type chosen.");
@@ -113,7 +113,7 @@ class Program
         ShowGoals();
         Console.Write("Choose goal number to record: ");
         int choice = int.Parse(Console.ReadLine());
-        
+
         int awarded = goals[choice - 1].RecordEvent();
         Console.WriteLine($"Recorded — gained {awarded} points.");
 

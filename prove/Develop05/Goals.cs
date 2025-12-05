@@ -1,12 +1,12 @@
 using System;
 
-abstract class Goal
+abstract class Goals
 {
     protected string _title;
     protected int _points;
     protected bool _completed;
 
-    protected Goal(string title, int points)
+    protected Goals(string title, int points)
     {
         _title = title ?? "";
         _points = points;
@@ -15,8 +15,6 @@ abstract class Goal
 
     public void SetComplete(bool complete) => _completed = complete;
 
-    /// Called when the player records progress for this goal.
-    /// Returns the number of points awarded by this event.
     public virtual int RecordEvent()
     {
         if (_completed) return 0;
@@ -28,8 +26,4 @@ abstract class Goal
     {
         return $"{(_completed ? "[X]" : "[ ]")} {_title}";
     }
-
-    /// Return a single-line representation for saving.
-    /// Subclasses should override to add additional fields.
-
 }

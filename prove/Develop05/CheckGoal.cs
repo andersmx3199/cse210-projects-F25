@@ -1,10 +1,10 @@
-class ChecklistGoal : Goal
+class CheckGoal : Goals
 {
     private int _target;
     private int _current;
     private int _bonus;
 
-    public ChecklistGoal(string title, int points, int target, int bonus) : base(title, points)
+    public CheckGoal(string title, int points, int target, int bonus) : base(title, points)
     {
         _target = target;
         _current = 0;
@@ -32,7 +32,7 @@ class ChecklistGoal : Goal
 
     public override string GetStatus()
     {
-        return $"{base.GetStatus()} (Completed {_current}/{_target})";
+        return $"{GetStatus()} (Completed {_current}/{_target})";
     }
 
 }
