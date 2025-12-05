@@ -1,3 +1,5 @@
+using System.Runtime.CompilerServices;
+
 class SimpleGoal : Goals
 {
     public SimpleGoal(string title, int points) : base(title, points) { }
@@ -7,5 +9,4 @@ class SimpleGoal : Goals
         // award only once
         return base.RecordEvent();
     }
-
 }

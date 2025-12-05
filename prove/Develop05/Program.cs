@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 class Program
 {
+    static int _totalPoints = 0;
     static List<Goals> goals = new List<Goals>();
     static void Main(string[] args)
     {
@@ -49,6 +50,7 @@ class Program
     static void ShowGoals()
     {
         Console.WriteLine("\nGoals:");
+        Console.WriteLine($"\nTotal Points: {_totalPoints}");
         if (goals.Count == 0)
         {
             Console.WriteLine("No Goals Listed Yet");
@@ -115,6 +117,7 @@ class Program
         int choice = int.Parse(Console.ReadLine());
 
         int awarded = goals[choice - 1].RecordEvent();
+        _totalPoints += awarded;
         Console.WriteLine($"Recorded — gained {awarded} points.");
 
     }

@@ -15,7 +15,12 @@ abstract class Goals
 
     public void SetComplete(bool complete) => _completed = complete;
 
-    public abstract int RecordEvent();
+    public virtual int RecordEvent()
+    {
+        if (_completed) return 0;
+        _completed = true;
+        return _points;
+    }
 
     public virtual string GetStatus()
     {
