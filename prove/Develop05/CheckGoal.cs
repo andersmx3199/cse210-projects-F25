@@ -18,12 +18,12 @@ class CheckGoal : Goals
 
     public override int RecordEvent()
     {
-        if (_completed) return 0;
+        if (_isComplete) return 0;
 
         _current++;
         if (_current >= _accomplished)
         {
-            _completed = true;
+            _isComplete = true;
             return _points + _bonus;
         }
 
@@ -34,7 +34,7 @@ class CheckGoal : Goals
     {
         string checkbox;
 
-        if (_completed)
+        if (_isComplete)
             checkbox = "[X]";
         else
             checkbox = "[ ]";

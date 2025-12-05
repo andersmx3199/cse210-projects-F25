@@ -29,7 +29,7 @@ class Program
                     AddGoal();
                     break;
                 case "3":
-                    TakeEvent();
+                    RecordEvent();
                     break;
                 case "4":
                     Console.WriteLine("Saved");
@@ -103,7 +103,7 @@ class Program
     }
 
     // Record an event
-    static void TakeEvent()
+    static void RecordEvent()
     {
         // If no goals are included there should be no goal to record.
         if (goals.Count == 0)
