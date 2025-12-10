@@ -28,7 +28,7 @@ abstract class Event
         return ($"Title: {_title}\nDescription: {_description}\nDate: {_date}\nTime: {_time}\nLocation: {_address.GetAddress()}");
     }
 
-    // Get the full description. NEED TO ADD THE TYPE OF EVENT!
+    // Get the full description.
     public abstract string GetFull();
 
     // Get the short description.
